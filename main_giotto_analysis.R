@@ -405,14 +405,14 @@ plot(original)
 library(terra)
 
 #to read drawn vectors back in:
-MK1 <- vect("groupA_mk1.shp")
-MK2 <- vect("groupA_mk2.shp")
-MK3 <- vect("groupA_mk3.shp")
-MK4 <- vect("groupA_mk4.shp")
-MK5 <- vect("groupB_mk5.shp")
-MK6 <- vect("groupB_mk6.shp")
-MK7 <- vect("groupB_mk7.shp")
-MK8 <- vect("groupB_mk8.shp")
+MK1 <- vect("./mk_boundaries/groupA_mk1.shp")
+MK2 <- vect("./mk_boundaries/groupA_mk2.shp")
+MK3 <- vect("./mk_boundaries/groupA_mk3.shp")
+MK4 <- vect("./mk_boundaries/groupA_mk4.shp")
+MK5 <- vect("./mk_boundaries/groupB_mk5.shp")
+MK6 <- vect("./mk_boundaries/groupB_mk6.shp")
+MK7 <- vect("./mk_boundaries/groupB_mk7.shp")
+MK8 <- vect("./mk_boundaries/groupB_mk8.shp")
 
 MK1_centroid <- terra::centroids(MK1)
 MK2_centroid <- terra::centroids(MK2)
@@ -1078,5 +1078,6 @@ ggplot(broad_counts, aes(x = distance_bin, y = proportion, fill = broad_category
   ) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
 
 
