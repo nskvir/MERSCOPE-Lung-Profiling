@@ -11,7 +11,7 @@ library(arrow)
 library(future.apply)
 
 
-root_dir <- "/restricted/projectnb/crem-trainees/Murphy_Lab/nskvir/giotto_analysis/data/"
+root_dir <- "/path/to/data/directory/"
 
 runs <- list(
     A = file.path(root_dir, "202403242054_VA00340-BUMC-CellBoundary-GroupA_VMSC01801", "region_0"),
@@ -195,3 +195,4 @@ spatInSituPlotPoints(
                       dpi = 600)
 )
 ############################
+
