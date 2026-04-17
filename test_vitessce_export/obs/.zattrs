@@ -1,0 +1,10 @@
+{
+    "_index": "_index",
+    "column-order": [
+        "cell_ID",
+        "list_ID",
+        "leiden_clus"
+    ],
+    "encoding-type": "dataframe",
+    "encoding-version": "0.2.0"
+}
