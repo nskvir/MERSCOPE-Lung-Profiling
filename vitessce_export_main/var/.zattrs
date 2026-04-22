@@ -1,0 +1,15 @@
+{
+    "_index": "_index",
+    "column-order": [
+        "feat_ID",
+        "var",
+        "hvf",
+        "nr_cells",
+        "perc_cells",
+        "total_expr",
+        "mean_expr",
+        "mean_expr_det"
+    ],
+    "encoding-type": "dataframe",
+    "encoding-version": "0.2.0"
+}

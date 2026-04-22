@@ -1,0 +1,13 @@
+{
+    "_index": "_index",
+    "column-order": [
+        "cell_ID",
+        "trnsfr_celltype_level2",
+        "trnsfr_celltype_level2_prob",
+        "nr_feats",
+        "perc_feats",
+        "total_expr"
+    ],
+    "encoding-type": "dataframe",
+    "encoding-version": "0.2.0"
+}
