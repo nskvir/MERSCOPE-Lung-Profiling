@@ -1018,6 +1018,7 @@ level2_to_broad <- list(
   "AM" = "Myeloid",
   "iMON" = "Myeloid",
   "cDC1" = "Myeloid",
+  "cDC2" = "Myeloid",
   "maDC" = "Myeloid",
 
   "Mast" = "Granulocyte",
@@ -1026,8 +1027,10 @@ level2_to_broad <- list(
 
   "B" = "Lymphocyte",
   "CD4 T" = "Lymphocyte",
+  "CD8 T" = "Lymphocyte",
   "NK" = "Lymphocyte",
   "ILC" = "Lymphocyte",
+  "Treg" = "Lymphocyte",
 
   "Megakaryocyte/Platelet" = "Megakaryocyte",
 
