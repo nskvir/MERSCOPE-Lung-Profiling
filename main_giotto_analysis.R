@@ -67,7 +67,7 @@ im_type <- list(
     dp = "DAPI"
 )
 
-# load images
+# load background images (available upon request, due to repository file size constraints)
 imgs <- list()
 for (type in (im_type)) {
     z <- 0:6
@@ -79,11 +79,15 @@ for (type in (im_type)) {
     names(imgs[[type]]) <- sprintf("z%d", z)
 }
 
-# flip vector data ############
-img_ext <- ext(imgs$PolyT$z0)
+# Flip vector data
 
 # find image y midline from first image
+img_ext <- ext(imgs$PolyT$z0)
 y_mid <- mean(c(img_ext[3], img_ext[4]))
+
+# Use this value to flip vector data if running without images loaded
+#y_mid <- 5451.036  # Group A
+
 
 gpoints <- lapply(
     gpoints,
@@ -177,11 +181,15 @@ for (type in (im_type)) {
     names(imgs[[type]]) <- sprintf("z%d", z)
 }
 
-# flip vector data
-img_ext <- ext(imgs$PolyT$z0)
+# Flip vector data
 
 # find image y midline from first image
+img_ext <- ext(imgs$PolyT$z0)
 y_mid <- mean(c(img_ext[3], img_ext[4]))
+
+# Use this value to flip vector data if running without images loaded
+#y_mid <- 6460.044  # Group B
+
 
 gpoints <- lapply(
     gpoints,
