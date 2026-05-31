@@ -64,28 +64,6 @@ for (type in (im_type)) {
     names(imgs[[type]]) <- sprintf("z%d", z)
 }
 
-
-# Flip vector data
-
-# find image y midline from first image (if images are loaded)
-img_ext <- ext(imgs$PolyT$z0)
-y_mid <- mean(c(img_ext[3], img_ext[4]))
-
-# These values can be used if running without background images loaded
-# y_mid <- 5451.036 #Group A
-# y_mid <- 6460.044 $Group B
-
-gpoints <- lapply(
-    gpoints,
-    flip,
-    y0 = y_mid
-)
-polygons <- lapply(
-    polygons,
-    flip,
-    y0 = y_mid
-)
-
 #create giotto object for a sample
 g <- giotto()
 g <- setGiotto(g, polygons)
@@ -164,7 +142,7 @@ spatInSituPlotPoints(
 # Test a specified subset/FOV using x,y coordinates
 mini <- subsetGiottoLocs(
     g, spat_unit = ":all:",
-    x_min = 4000, x_max = 5000, y_min = 4000, y_max = 5000, z_min = NULL, z_max = NULL,
+    x_min = 3900, x_max = 4250, y_min = 9402, y_max = 9602, z_min = NULL, z_max = NULL,
     poly_info = list(hex100 = "hex100")
     )
 
@@ -184,7 +162,7 @@ spatInSituPlotPoints(
 
 ### Plot images in conjunction with transcripts (utilized for Figures 3B and 3C)
 spatInSituPlotPoints(
-    mini, show_image = T, image_name = "Cellbound1_z3", 
+    mini, show_image = T, image_name = "DAPI_z3", 
     show_polygon = F,
     use_overlap = F,
     spat_unit = "hex100",
